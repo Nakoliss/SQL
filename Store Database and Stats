@@ -1,0 +1,35 @@
+--Create a store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, SIZE TEXT, price REAL);
+
+
+INSERT INTO store 
+
+VALUES
+(1, "Brian Adams", "Black", "L", 9.99),
+(2, "Brian Adams", "Black", "M", 9.99),
+(3, "Brian Adams", "Black", "S", 9.99),
+(4, "Brian Adams", "Black", "XL", 9.99),
+(5, "Madona", "Red", "L", 19.99),
+(6, "Madona", "Red", "S", 19.99),
+(7, "Madona", "Blue", "L", 19.99),
+(8, "Ricardo", "Yellow", "S", 12.99),
+(9, "Ricardo", "Black", "XL", 7.99),
+(10, "Ricardo", "Blue", "L", 13.99),
+(11, "Ricardo", "Purple", "M", 19.99),
+(12, "Ricardo", "Navy", "M", 9.99),
+(13, "Ricardo", "Pink", "L", 9.99),
+(14, "Ricardo", "Orange", "S", 7.99),
+(15, "Ricardo", "Grey", "XL", 6.99)
+;
+
+--Display everything (columns)
+SELECT * from store;
+
+--Display everything by price (from lower to highest price)
+SELECT * FROM store
+ORDER BY price asc;
+
+--Display the count of each color (How many black items, red, etc.)
+SELECT color, COUNT(*) FROM store
+GROUP BY color;
