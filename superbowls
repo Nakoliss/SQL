@@ -1,4 +1,3 @@
-/* Put your data in here and query it! */
 CREATE TABLE superbowls(
   Date      TEXT PRIMARY KEY,
   SB         TEXT,
@@ -81,3 +80,13 @@ WHERE Winner LIKE "%packers%";
 SELECT *
 FROM superbowls
 WHERE Winner IN ("Green Bay Packers", "Dallas Cowboys", "Chicago Bears"); 
+
+SELECT *
+FROM superbowls
+WHERE Winner like "%cowboys%" 
+OR Loser like "%cowboys%";
+
+SELECT COUNT(*) AS Times_Bears_went_to_SuperBowl
+FROM superbowls
+WHERE Winner like "%bears%" 
+OR Loser like "%bears%";
